@@ -1,0 +1,179 @@
+<!DOCTYPE html> <!--! + tab para mostrar toda la estructura HTML5-->
+<html lang="en">
+        <head><!--Si necesitamos incluir archivos css o js en la pagina dentro de head se pone el enlace-->
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Prueba</title>
+        </head>
+        <body>
+          <h1>Mi pagina</h1>
+             <!-- Esto es un comentario -->
+            <main> <!--Etiqueta que representa el contenido principal del <body>, solo puede existir uno y no puede estar dentro de otras etiquetas-->
+  
+              <a href="#Parrafo-1">Parrafo 1</a><!--Para crear un enlace INTERNO de la pagina, El #Parrafo-1 fue el id que le defini al parrafo 1 que está más abajo-->
+              <a href="#Parrafo-2">Parrafo 2</a>
+         
+              <h2 id="Parrafo-1">Parrafo 1</h2>
+                <p>(Esto es un parrafo, alt+z para visualizar parrafos grandes en el editor de codigo) <a href="https://es.wikipedia.org" target="_blank" rel="noopener noreferrer">HTML</a>, siglas en inglés de Hyper Markup Language, hace referencia al lenguaje de
+              marcado para la elaboración de paginas </p>
+
+              <h2 id="Parrafo-2">Parrafo 2</h2>
+                <p>(Esto es un parrafo, alt+z para visualizar parrafos grandes en el editor de codigo) HTML, siglas en inglés de Hyper Markup Language, hace referencia al lenguaje de
+                marcado </a> para la elaboración de paginas </p>
+
+              <img src="https://www.elespectador.com/resizer/n51axcLG3lfQ_A-QSGby5uCTzvQ=/657x0/filters:format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/UGSFS2KOJJDJNBNAC57HGU5L3I.jpg" alt="hacker"> <!--img no necesita etiqueta de cierre, en src es la fuente de la imagen SI SE USO DE INTERNET, alt es texto alternativo si la imagen no se descarga o no se ve-->           
+           
+              <img src="img/programacion.jpg" alt="programacion"> <!--NombreCarpeta/NombreArchivo = para cuando la imagen este descargada en el PC-->     
+              
+              <a href="https://enlacedeprueba.org" img src="https://bit.ly/fcc.relaxing-cat" alt="Imagen de gato" target="_blank" rel="noopener noref"></a><!--Para convertir una imagen en enlace, si aun no se sabe a que direccion se quiere redireccionar solo cambiar el valor de href por un #--><!--la etiqueta a es para convertir texto a enlace de paginas EXTERNAS a la pagina, en href se coloca la fuente a la cual se quiere enviar, target="_blank" es para que al darle clic me abra otra pestaña, rel="noopener noreferrer" es para prevenir un ataque cibernetico-->
+
+               <h3>Lista de idiomas</h3>
+
+               <p>Algunos idiomas son: </p>
+               <ul><!--lista no ordenada, muestra los elementos con viñetas-->
+                 <li>Español</li>
+                 <li>Ingles</li>
+                 <li>Frances</li>
+                </ul>
+
+                <p>Otros idiomas son: </p><!--lista ordenada, muestra numeros-->
+                <ol>
+                  <li>Aleman</li>
+                  <li>Japones</li>
+                  <li>Ruso</li>
+                </ol>
+
+                <hr> <!--Crea una linea horizontal-->
+
+                <p>Para poder colocar una palabra o texto en <strong>negrita</strong> solo hay que utilizar la etiqueta <strong>strong</strong></p>
+
+                <p>Para poder colocar una palabra o texto en <em>cursiva</em> solo hay que utilizar la etiqueta <em>em</em></p>
+
+                <p>Para poder <s>tachar</s> una palabra o texto solo hay que utilizar la etiqueta s</p>
+
+              <div><!--Etiqueta que agrupa todo el contenido dentro del div en un mismo contenedor, usado principalmente para estilos de css para cambiar el estilo de todo lo que se encuentre dentro del contenedor de css-->
+                <form action="/enviar-respuesta.php"> <!--action representa la direccion en el servidor del archivo que va a manejar esos datos, este es un ejmeplo ya que no hay uno creado-->
+                  <input type="text"></input><!-- input me genera un campo en donde se puede escribir-->
+                  <button type="submit">Enviar</button><!--button Me genera un boton-->
+                </form>  
+                <br>
+                  <hr>
+                <br>
+                <form action="/enviar_datos.txt">
+                  <input type="text" placeholder="Nombre"><!--El atributo placeholder es para darle una pista al usuario de que va dentro del campo y cuando este escriba se borrara el texto-->
+                  <input type="password" placeholder="Contraseña"><!--un input type="password" es para cuando el texto es de contraseñas-->
+                  <button type="submit">Enviar</button>
+                </form>
+                <br>
+                <br>
+                <hr>
+
+                <form action="/aqui_se_envian_los_datos.com">
+                  <input type="text" placeholder="Nombre de usuario" required><!--El atributo required hace que los campos no puedan enviarse estando vacios-->
+                  <input type="password" placeholder="Contraseña" required>
+                  <input type="date" name="" id=""><!--el atributo de tipo date es para que se puede elegir la fecha-->
+                  <button type="submit">Enviar</button>
+                </form>
+                <br>
+                <br>
+                <hr>
+
+                <form action="/enviar_datos.org">
+                  <input type="radio">Hombre<!--cuando es de tipo radio es para que seleccione casillas-->
+                  <label><input type="radio">Mujer</label><!--label es para que no haya necesidad de presionar solo la casilla si no tambien el texto para que se marque está-->
+                  <label for="Alien"><input id="Alien" type="radio">Alien</label><!--aqui se le asigna el id alien al boton de radio, y el valor alien se asigno al atributofor eso lo que hace es conectar esa opcion con la etiqueta conectar esa -->
+                </form>
+
+                <hr><br>
+                <form action="/enviarDatos.col">
+                  <label for="Hombre"><input type="radio" name="genero" id="Hombre">Hombre</label><!--Para hacer que solo una casilla se puede marcar se crea el atributo name con un valor y si los campos pertenecen a un mismo grupo por ejemplo este de genero de les coloca el mismo valor asi solo se podra elegir una-->
+                  <label for="Mujer"><input type="radio" name="genero" id="Mujer"">Mujer</label>
+                </form><br><br>
+
+                <hr>
+                <form action="enviar.com">
+                  <input type="text" placeholder="Nombre" required>
+                  <br>
+                  <input type="text" placeholder="Apellido" required>
+                  <br>
+                  <input type="email" name="" id="" placeholder="Correo electronico"><!--input de tipo email para que al enviarlo, verifique que esta bien escrito-->
+                  <br>
+                  <label for="Hombre2">
+                    <input type="radio" value="Hombre2" id="Hombre2" name ="datos" required>Hombre <!--Value especifica el valor que sera enviado al servidor, le estamos diciendo que valor fue seleccionado por el usuario-->
+                  </label>
+                  <br>
+                  <label for="Mujer2">
+                    <input type="radio" value="Mujer2" id="Mujer2" name="datos" required>Mujer <br>
+                    <input type="date" name="" id="">
+                  </label><br>
+                  <input type="file" name="" id=""><br><!--tipe file para que me deje elegir un archivo del computador-->
+                  <input type="color" name="" id=""><!--type file para que me deje elegir un color-->
+                  <input type="reset" value="Limpiar"><!--type reset para que al darle clic me reinicie la informacion que este en los campos,
+                    checkbox, radio, etc y los deje en blanco-->
+
+                  <h4>Que generos musicales te gustan</h4>
+
+                  <label for="pop">
+                    <input id="pop" type="checkbox" value="pop" name="generosMusicales">Pop
+                  </label> 
+                  <label for="electronica">
+                    <input id="electronica" value="electronica" name="generosMusicales" type="checkbox">Electronica
+                  </label> <!--Checkbox es para -->
+                  <label for="rock">
+                    <input id="rock" type="checkbox" value="rock" name="generosMusicales">Rock
+                  </label> 
+                    <button type="submit">Enviar</button>
+                  </form
+                </div>
+
+                <br><br>
+
+                <table border="1px"> <!--Table es para crear una tabla (el atributo border es para colocarle un borde)-->
+                  <tr><!--tr es para crear las filas en la tabla-->
+                    <td>Nombre</td><!--td es para crear las columnas en la tabla-->
+                    <td>Teléfono</td>
+                    <td>Dirección</td>
+                  </tr>
+                  <tr>
+                    <td>Andrés Orduz</td>
+                    <td>3042331378</td>
+                    <td>Chico norte</td>
+
+                  </tr>
+                  <tr>
+                    <td>Luisa jiménez</td>
+                    <td>30167970178</td>
+                    <td>Calle 12-60</td>
+
+                  </tr>
+                  <tr>
+                    <td>Daniel Gomez</td>
+                    <td>3042331378</td>
+                    <td>Av Tintal 12sur</td>
+
+                  </tr>
+                </table><br><br>
+
+                <iframe src="https//google.com" width="150" height="150" frameborder="0"></iframe><!--iframe es para colocar una pagina web dentro de otra-->
+                <iframe src="https//google.com" width="150" height="150" frameborder="0"></iframe><br><br>
+
+                <iframe width="300" height="150" src="https://www.youtube.com/embed/XqFR2lqBYPs" title="YouTube video player" frameborder="0"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!--para colocar un video de youtube
+                , ir al video buscar compartir y copiar el iframe que esta en incorporar--><br><br>
+
+                <h3>Ubicacion complejo del SENA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2188802495474!2d-74.09238180951539!3d4.616285408803014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f996f9cf404c9%3A0x819df
+                cf53c92d9e9!2sSENA%20Centro%20de%20Gesti%C3%B3n%20Industrial!5e0!3m2!1ses!2sco!4v1653690781476!5m2!1ses!2sco" width="600" height="450"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><!--para poner un mapa solo hay que ir a google maps, buscar la direccion
+                que queremos que aparezca, compartir, luego insertar un mapa, y por ultimo copiar el frame de html y pagarlo aqui-->
+                <br>
+                <iframe width="320" height="440" src="https://www.instagram.com/p/B3Eg0-uF_Rt/embed" frameborder="0"></iframe><!--para poner una publicacion de el instagram de alguna pagina
+               solo hay que copiar el link de la publicacion y copiarlo aca-->
+
+            </main>
+            <footer>
+              <p><small>Sin derechos de autor - <a href="www.ejmpiedepagina.com" target="_blank" rel="noopener noreferrer ">Visita nuestra pagina</a></small></p>
+            </footer>
+        </body>
+
